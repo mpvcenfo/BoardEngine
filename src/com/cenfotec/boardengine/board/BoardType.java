@@ -1,5 +1,6 @@
 package com.cenfotec.boardengine.board;
 
-public interface IMovePiece {
-
+public enum BoardType {
+	Chess,
+	Checkers
 }

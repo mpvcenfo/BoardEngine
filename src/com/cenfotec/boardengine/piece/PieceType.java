@@ -1,4 +1,4 @@
-package com.cenfotec.boardengine.board;
+package com.cenfotec.boardengine.piece;
 
 public enum PieceType {
 	King,
