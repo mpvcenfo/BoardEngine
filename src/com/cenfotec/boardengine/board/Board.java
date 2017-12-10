@@ -6,7 +6,7 @@ import com.cenfotec.boardengine.piece.Piece;
 
 public class Board {
 	private int size;
-	private BoardType type;
+	private BoardTypes type;
 	private ArrayList<Piece> pieces;
 	
 	public int getSize() {
@@ -15,10 +15,10 @@ public class Board {
 	public void setSize(int size) {
 		this.size = size;
 	}
-	public BoardType getType() {
+	public BoardTypes getType() {
 		return type;
 	}
-	public void setType(BoardType type) {
+	public void setType(BoardTypes type) {
 		this.type = type;
 	}
 	public ArrayList<Piece> getPieces() {
@@ -28,8 +28,33 @@ public class Board {
 		this.pieces = pieces;
 	}
 	
-	public Board(int size, BoardType type) {
+	public Board(int size, BoardTypes type) {
 		this.size = size;
 		this.type = type;
+		this.pieces = new ArrayList<Piece>();
+	}
+	
+	public boolean makeMove(int sourceRow, int sourceCol, int targetRow, int targetCol) {
+		boolean validMove = false;
+		
+		Piece piece = findPiece(sourceRow, sourceCol);
+		
+		piece.movePiece(sourceRow, sourceCol, targetRow, targetCol);
+		
+		
+		
+		return validMove;
+	}
+	
+	private Piece findPiece(int row, int col) {
+		Piece piece = null;
+		
+		for(Piece p: pieces) {
+			if(p.getRow() == row && p.getCol() == col) {
+				piece = p;
+			}
+		}
+		
+		return piece;
 	}
 }

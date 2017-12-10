@@ -1,21 +1,21 @@
 package com.cenfotec.boardengine.piece.piecefactory;
 
 import com.cenfotec.boardengine.piece.Piece;
-import com.cenfotec.boardengine.piece.PieceType;
-import com.cenfotec.boardengine.player.PlayerType;
+import com.cenfotec.boardengine.piece.PieceTypes;
+import com.cenfotec.boardengine.player.PlayerTypes;
 
 public final class PieceFactory {
-	public static Piece createPiece(PieceType type, PlayerType player) {
+	public static Piece createPiece(PieceTypes type, PlayerTypes player) {
 		Piece piece;
 
 		switch (type) {
 		case King:
 			piece = new Piece("King", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(0);
 				piece.setCol(4);
-			} else if (player == PlayerType.Black) {
+			} else if (player == PlayerTypes.Black) {
 				piece.setRow(7);
 				piece.setCol(4);
 			}
@@ -24,12 +24,12 @@ public final class PieceFactory {
 		case Queen:
 			piece = new Piece("Queen", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(0);
 				piece.setCol(3);
 			}
 
-			else if (player == PlayerType.Black) {
+			else if (player == PlayerTypes.Black) {
 				piece.setRow(7);
 				piece.setCol(3);
 			}
@@ -38,12 +38,12 @@ public final class PieceFactory {
 		case Rook:
 			piece = new Piece("Rook", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(0);
 				piece.setCol(0);
 			}
 
-			else if (player == PlayerType.Black) {
+			else if (player == PlayerTypes.Black) {
 				piece.setRow(7);
 				piece.setCol(0);
 			}
@@ -52,12 +52,12 @@ public final class PieceFactory {
 		case Bishop:
 			piece = new Piece("Bishop", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(0);
 				piece.setCol(2);
 			}
 
-			else if (player == PlayerType.Black) {
+			else if (player == PlayerTypes.Black) {
 				piece.setRow(7);
 				piece.setCol(2);
 			}
@@ -66,12 +66,12 @@ public final class PieceFactory {
 		case Knight:
 			piece = new Piece("Knight", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(0);
 				piece.setCol(1);
 			}
 
-			else if (player == PlayerType.Black) {
+			else if (player == PlayerTypes.Black) {
 				piece.setRow(7);
 				piece.setCol(1);
 			}
@@ -80,12 +80,12 @@ public final class PieceFactory {
 		case Pawn:
 			piece = new Piece("Pawn", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(1);
 				piece.setCol(0);
 			}
 
-			else if (player == PlayerType.Black) {
+			else if (player == PlayerTypes.Black) {
 				piece.setRow(6);
 				piece.setCol(0);
 			}
@@ -94,12 +94,12 @@ public final class PieceFactory {
 		case CheckersPiece:
 			piece = new Piece("CheckersPiece", type, player);
 
-			if (player == PlayerType.White) {
+			if (player == PlayerTypes.White) {
 				piece.setRow(0);
 				piece.setCol(0);
 			}
 
-			else if (player == PlayerType.Black) {
+			else if (player == PlayerTypes.Black) {
 				piece.setRow(7);
 				piece.setCol(1);
 			}

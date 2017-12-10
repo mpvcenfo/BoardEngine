@@ -1,6 +1,6 @@
 package com.cenfotec.boardengine.board;
 
-public enum BoardType {
+public enum BoardTypes {
 	Chess,
 	Checkers
 }

@@ -1,6 +1,6 @@
 package com.cenfotec.boardengine.piece;
 
-public enum PieceType {
+public enum PieceTypes {
 	King,
 	Queen,
 	Rook,

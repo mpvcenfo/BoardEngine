@@ -1,6 +1,6 @@
 package com.cenfotec.boardengine.player;
 
-public enum PlayerType {
+public enum PlayerTypes {
 	White,
 	Black,
 }
